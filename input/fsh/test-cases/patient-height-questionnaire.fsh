@@ -19,7 +19,7 @@ Usage: #example
 * version = "null-2025-01-14-08.55.57"
 * status = #active
 * item[+]
-  * extension[sdc-questionnaire-definitionExtract]/valueCanonical = Canonical(PatientHeightFeature)
+  * extension[sdc-questionnaire-definitionExtract].extension[definition].valueCanonical = Canonical(PatientHeight)
   * extension[sdc-questionnaire-definitionExtractValue]
     * extension[definition].valueUri = "http://fhir.org/test/StructureDefinition/PatientHeightFeature#Observation.subject"
     * extension[expression].valueExpression
@@ -31,9 +31,9 @@ Usage: #example
       * language = #text/fhirpath
       * expression = "%resource.authored"
   * extension[sdc-questionnaire-itemPopulationContext].valueExpression
-    * name = "PatientHeightQuestionnaire"
+    * name = "PatientHeightFeature"
     * language = #text/cql-identifier
-    * expression = "PatientHeight"
+    * expression = "Patient Height"
     * reference = Canonical(PatientHeightFeatureLogic)
   * linkId = "1"
   * definition = "http://fhir.org/test/StructureDefinition/PatientHeightFeature"

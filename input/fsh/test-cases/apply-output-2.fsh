@@ -12,7 +12,7 @@ Description: "Test case 2 bundle from $apply"
 
 Instance: DrinkWaterRequestGroup2
 InstanceOf: RequestGroup
-Usage: #inline
+Usage: #example
 * intent = #proposal
 * status = #draft
 * subject = Reference(Patient/Patient1)
@@ -31,7 +31,7 @@ Usage: #inline
 
 Instance: DrinkWaterMessage2
 InstanceOf: CommunicationRequest
-Usage: #inline
+Usage: #example
 * status = #draft
 * subject = Reference(Patient/Patient1)
 * doNotPerform = false
