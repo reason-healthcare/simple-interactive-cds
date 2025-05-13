@@ -1,7 +1,7 @@
 Instance: PatientHeightQuestionnaireResponse2
 InstanceOf: QuestionnaireResponse
 Usage: #example
-* questionnaire = "Questionnaire/PatientHeight"
+* questionnaire = Canonical(PatientHeightQuestionnaire)
 * status = #in-progress
 * subject = Reference(Patient/Patient1)
 * authored = "2025-01-15T10:00:00Z"
