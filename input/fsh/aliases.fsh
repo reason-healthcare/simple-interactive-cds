@@ -78,3 +78,18 @@ Alias: $cpg-activity-type-cs = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activit
 Alias: $launchContext = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 
 Alias: $action-type = http://terminology.hl7.org/CodeSystem/action-type
+
+
+Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
+Alias: $sct = http://snomed.info/sct
+
+Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $loinc = http://loinc.org
+Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+Alias: $sct = http://snomed.info/sct
+Alias: $clinical-codes = http://acme.org/devices/clinical-codes
+Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
+
+Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
+Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
+Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category

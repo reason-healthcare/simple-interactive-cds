@@ -22,14 +22,23 @@ Usage: #definition
 * type = $library-type#logic-library
 * content.id = "ig-loader-Common.cql"
 
-Instance: PatientHeightFeatureLogic
+Instance: HypertensionFeatureLogic
 InstanceOf: Library
 Usage: #definition
 Title: "Patient Height Feature Logic"
-* insert DefinitionMetadata(PatientHeightFeatureLogic, Library)
-* description = "Case Feature Definition Logic for Patient Height"
+* insert DefinitionMetadata(HypertensionFeatureLogic, Library)
+* description = "Case Feature Definition Logic for Hypertension"
 * type = $library-type#logic-library
-* content.id = "ig-loader-PatientHeightFeatureLogic.cql"
+* content.id = "ig-loader-HypertensionFeatureLogic.cql"
+
+Instance: ChronicConditionFeatureLogic
+InstanceOf: Library
+Usage: #definition
+Title: "Patient Height Feature Logic"
+* insert DefinitionMetadata(ChronicConditionFeatureLogic, Library)
+* description = "Case Feature Definition Logic for Chronic Condition"
+* type = $library-type#logic-library
+* content.id = "ig-loader-ChronicConditionFeatureLogic.cql"
 
 Instance: ApplicabilityLogic
 InstanceOf: Library
