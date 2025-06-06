@@ -33,25 +33,25 @@ Usage: #example
 // * subject = Reference(Patient/Patient1)
 // * medicationCodeableConcept = $RXNORM#104384 "ramipril 2.5 MG Oral Capsule [Altace]"
 
-// Instance: HypertensionObservation
-// InstanceOf: HypertensionFeature
-// Usage: #example
-// * status = #final
-// * code = http://example.org/CodeSystem/CaseFeatureCodes#hypertension-feature
-// * subject = Reference(Patient/Patient1)
-// * effectiveDateTime = "2025-01-15T00:00:00Z"
-// * valueBoolean = true
-// * performer = Reference(Practitioner/Practitioner1)
-
-Instance: ChronicConditionObservation
-InstanceOf: ChronicConditionFeature
+Instance: HypertensionObservation
+InstanceOf: HypertensionFeature
 Usage: #example
 * status = #final
-* code = http://example.org/CodeSystem/CaseFeatureCodes#no-chronic-conditions-feature
+* code = http://example.org/CodeSystem/CaseFeatureCodes#hypertension-feature
 * subject = Reference(Patient/Patient1)
-* effectiveDateTime = "2025-01-14T00:00:00Z"
+* effectiveDateTime = "2025-01-15T00:00:00Z"
 * valueBoolean = false
 * performer = Reference(Practitioner/Practitioner1)
+
+// Instance: ChronicConditionObservation
+// InstanceOf: ChronicConditionFeature
+// Usage: #example
+// * status = #final
+// * code = http://example.org/CodeSystem/CaseFeatureCodes#no-chronic-conditions-feature
+// * subject = Reference(Patient/Patient1)
+// * effectiveDateTime = "2025-01-14T00:00:00Z"
+// * valueBoolean = false
+// * performer = Reference(Practitioner/Practitioner1)
 
 Instance: TestCase1
 InstanceOf: Bundle
@@ -63,8 +63,8 @@ Description: "Test Case 1 Bundle"
 * insert BundleEntry(Organization, Organization1)
 * insert BundleEntry(Practitioner, Practitioner1)
 // * insert BundleEntry(MedicationRequest, AceInhibitorMedicationRequest)
-// * insert BundleEntry(Observation, HypertensionObservation)
-* insert BundleEntry(Observation, ChronicConditionObservation)
+* insert BundleEntry(Observation, HypertensionObservation)
+// * insert BundleEntry(Observation, ChronicConditionObservation)
 
 
 
