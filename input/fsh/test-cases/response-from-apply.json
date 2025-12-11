@@ -1,0 +1,310 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "return",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "DailyAppleRecommendation",
+        "type": "collection",
+        "entry": [
+          {
+            "resource": {
+              "resourceType": "RequestGroup",
+              "id": "DailyAppleRecommendation",
+              "contained": [
+                {
+                  "resourceType": "OperationOutcome",
+                  "id": "apply-outcome-DailyAppleRecommendation",
+                  "issue": [
+                    {
+                      "severity": "error",
+                      "code": "exception",
+                      "diagnostics": "Error encountered extracting DailyAppleRecommendation-Patient1: Cannot invoke \"org.opencds.cqf.fhir.utility.adapter.IQuestionnaireItemComponentAdapter.getItem()\" because the return value of \"org.opencds.cqf.fhir.cr.questionnaireresponse.extract.ItemPair.getItem()\" is null"
+                    }
+                  ]
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-messages",
+                  "valueReference": {
+                    "reference": "#apply-outcome-DailyAppleRecommendation"
+                  }
+                }
+              ],
+              "instantiatesCanonical": [
+                "http://example.org/PlanDefinition/DailyAppleRecommendation|0.1.0"
+              ],
+              "status": "active",
+              "intent": "proposal",
+              "subject": {
+                "reference": "Patient/Patient1"
+              },
+              "action": [
+                {
+                  "id": "continue-normal-diet",
+                  "title": "Continue normal diet",
+                  "description": "Continue normal diet",
+                  "textEquivalent": "Continue normal diet",
+                  "code": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+                          "code": "guideline-based-care"
+                        }
+                      ]
+                    }
+                  ],
+                  "condition": [
+                    {
+                      "kind": "applicability",
+                      "expression": {
+                        "language": "text/cql-identifier",
+                        "expression": "Should recommend normal diet if chronic conditions are not present"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "resource": {
+              "resourceType": "Questionnaire",
+              "id": "DailyAppleRecommendation",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+                  "valueCanonical": "http://example.org/Library/ApplicabilityLogic|0.1.0"
+                },
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext",
+                  "extension": [
+                    {
+                      "url": "name",
+                      "valueCoding": {
+                        "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext",
+                        "code": "patient",
+                        "display": "Patient"
+                      }
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "Patient"
+                    }
+                  ]
+                }
+              ],
+              "url": "http://example.org/Questionnaire/DailyAppleRecommendation",
+              "version": "0.1.0-Patient1-2025-12-11-03.45.24",
+              "status": "active",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtract",
+                      "valueCanonical": "http://example.org/StructureDefinition/HypertensionFeature"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+                      "extension": [
+                        {
+                          "url": "definition",
+                          "valueUri": "http://fhir.org/test/StructureDefinition/HypertensionFeature#Observation.subject"
+                        },
+                        {
+                          "url": "expression",
+                          "valueExpression": {
+                            "language": "text/fhirpath",
+                            "expression": "%resource.subject"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+                      "extension": [
+                        {
+                          "url": "definition",
+                          "valueUri": "http://fhir.org/test/StructureDefinition/HypertensionFeature#Observation.effective[x]"
+                        },
+                        {
+                          "url": "expression",
+                          "valueExpression": {
+                            "language": "text/fhirpath",
+                            "expression": "%resource.authored"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+                      "valueExpression": {
+                        "name": "HypertensionFeature",
+                        "language": "text/cql-identifier",
+                        "expression": "Hypertension",
+                        "reference": "http://example.org/Library/HypertensionFeatureLogic"
+                      }
+                    }
+                  ],
+                  "linkId": "1",
+                  "definition": "http://example.org/StructureDefinition/HypertensionFeature",
+                  "text": "Hypertension Feature",
+                  "type": "group",
+                  "required": false,
+                  "repeats": false,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                          "valueExpression": {
+                            "language": "text/cql-expression",
+                            "expression": "%HypertensionFeature.value"
+                          }
+                        }
+                      ],
+                      "linkId": "1.1",
+                      "definition": "http://example.org/StructureDefinition/HypertensionFeature#Observation.value[x]",
+                      "text": "Diagnosis of hypertension",
+                      "type": "boolean",
+                      "required": true,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtract",
+                      "valueCanonical": "http://example.org/StructureDefinition/ChronicConditionFeature"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+                      "extension": [
+                        {
+                          "url": "definition",
+                          "valueUri": "http://fhir.org/test/StructureDefinition/ChronicConditionFeature#Observation.subject"
+                        },
+                        {
+                          "url": "expression",
+                          "valueExpression": {
+                            "language": "text/fhirpath",
+                            "expression": "%resource.subject"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-definitionExtractValue",
+                      "extension": [
+                        {
+                          "url": "definition",
+                          "valueUri": "http://fhir.org/test/StructureDefinition/ChronicConditionFeature#Observation.effective[x]"
+                        },
+                        {
+                          "url": "expression",
+                          "valueExpression": {
+                            "language": "text/fhirpath",
+                            "expression": "%resource.authored"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+                      "valueExpression": {
+                        "name": "ChronicConditionFeature",
+                        "language": "text/cql-identifier",
+                        "expression": "Chronic Condition",
+                        "reference": "http://example.org/Library/ChronicConditionFeatureLogic"
+                      }
+                    }
+                  ],
+                  "linkId": "2",
+                  "definition": "http://example.org/StructureDefinition/ChronicConditionFeature",
+                  "text": "Chronic Condition Feature",
+                  "type": "group",
+                  "required": false,
+                  "repeats": false,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                          "valueExpression": {
+                            "language": "text/cql-expression",
+                            "expression": "%ChronicConditionFeature.value"
+                          }
+                        }
+                      ],
+                      "linkId": "2.1",
+                      "definition": "http://example.org/StructureDefinition/ChronicConditionFeature#Observation.value[x]",
+                      "text": "Has one or more chronic conditions",
+                      "type": "boolean",
+                      "required": true,
+                      "repeats": false
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "resource": {
+              "resourceType": "QuestionnaireResponse",
+              "id": "DailyAppleRecommendation-Patient1",
+              "questionnaire": "http://example.org/Questionnaire/DailyAppleRecommendation|0.1.0-Patient1-2025-12-11-03.45.24",
+              "status": "in-progress",
+              "subject": {
+                "reference": "Patient/Patient1"
+              },
+              "authored": "2025-12-11T15:45:24+00:00",
+              "item": [
+                {
+                  "linkId": "1",
+                  "definition": "http://example.org/StructureDefinition/HypertensionFeature",
+                  "text": "Hypertension Feature",
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author",
+                          "valueReference": {
+                            "reference": "http://cqframework.org/fhir/Device/clinical-quality-language"
+                          }
+                        }
+                      ],
+                      "linkId": "1.1",
+                      "definition": "http://example.org/StructureDefinition/HypertensionFeature#Observation.value[x]",
+                      "text": "Diagnosis of hypertension",
+                      "answer": [
+                        {
+                          "valueBoolean": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "linkId": "2",
+                  "definition": "http://example.org/StructureDefinition/ChronicConditionFeature",
+                  "text": "Chronic Condition Feature",
+                  "item": [
+                    {
+                      "linkId": "2.1",
+                      "definition": "http://example.org/StructureDefinition/ChronicConditionFeature#Observation.value[x]",
+                      "text": "Has one or more chronic conditions"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
