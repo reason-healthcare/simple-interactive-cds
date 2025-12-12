@@ -1,0 +1,297 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators",
+         "signatureLevel" : "None",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "238",
+            "s" : [ {
+               "value" : [ "","library ChronicConditionFeatureLogic version '0.1.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "ChronicConditionFeatureLogic",
+         "system" : "http://example.org",
+         "version" : "0.1.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "208",
+            "locator" : "5:1-5:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://example.org/FHIRHelpers",
+            "version" : "0.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'0.1.0'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "210",
+            "locator" : "6:1-6:30",
+            "localIdentifier" : "Common",
+            "path" : "http://example.org/Common",
+            "version" : "0.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "Common" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'0.1.0'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "codeSystems" : {
+         "def" : [ {
+            "localId" : "212",
+            "locator" : "8:1-8:79",
+            "name" : "CaseFeatureCodes",
+            "id" : "http://example.org/CodeSystem/CaseFeatureCodes",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "212",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"CaseFeatureCodes\"",": ","'http://example.org/CodeSystem/CaseFeatureCodes'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "valueSets" : {
+         "def" : [ {
+            "localId" : "217",
+            "locator" : "11:1-11:84",
+            "name" : "Chronic condition codes",
+            "id" : "http://example.org/ValueSet/ChronicConditionVS",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "217",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Chronic condition codes\"",": ","'http://example.org/ValueSet/ChronicConditionVS'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : [ ]
+         } ]
+      },
+      "codes" : {
+         "def" : [ {
+            "localId" : "214",
+            "locator" : "9:1-9:89",
+            "name" : "Chronic Condition Feature",
+            "id" : "no-chronic-conditions-feature",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "214",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Chronic Condition Feature\"",": ","'no-chronic-conditions-feature'"," from " ]
+                  }, {
+                     "r" : "215",
+                     "s" : [ {
+                        "value" : [ "\"CaseFeatureCodes\"" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "215",
+               "locator" : "9:72-9:89",
+               "name" : "CaseFeatureCodes"
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "222",
+            "locator" : "13:1-13:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "220",
+            "locator" : "13:1-13:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "221",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "219",
+                  "locator" : "13:1-13:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "225",
+            "locator" : "15:1-16:63",
+            "name" : "Chronic Condition Asserted",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "225",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Chronic Condition Asserted\"",":\n  " ]
+                  }, {
+                     "r" : "235",
+                     "s" : [ {
+                        "r" : "226",
+                        "s" : [ {
+                           "value" : [ "Common" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "235",
+                        "s" : [ {
+                           "value" : [ "MostRecent","(" ]
+                        }, {
+                           "r" : "229",
+                           "s" : [ {
+                              "value" : [ "[","Observation",": " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "\"Chronic Condition Feature\"" ]
+                              } ]
+                           }, {
+                              "value" : [ "]" ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "235",
+               "locator" : "16:3-16:63",
+               "name" : "MostRecent",
+               "libraryName" : "Common",
+               "type" : "FunctionRef",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "229",
+                  "locator" : "16:21-16:62",
+                  "dataType" : "{http://hl7.org/fhir}Observation",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                  "codeProperty" : "code",
+                  "codeComparator" : "~",
+                  "type" : "Retrieve",
+                  "codes" : {
+                     "localId" : "234",
+                     "type" : "ToList",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "228",
+                        "locator" : "16:35-16:61",
+                        "name" : "Chronic Condition Feature",
+                        "type" : "CodeRef"
+                     }
+                  },
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               } ]
+            }
+         }, {
+            "localId" : "238",
+            "locator" : "23:1-24:30",
+            "name" : "Chronic Condition",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "238",
+                  "s" : [ {
+                     "value" : [ "/**\n * @description\n * Feature is asserted followed by inferred\n */\n\n","define ","\"Chronic Condition\"",":\n  " ]
+                  }, {
+                     "r" : "239",
+                     "s" : [ {
+                        "value" : [ "\"Chronic Condition Asserted\"" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "239",
+               "locator" : "24:3-24:30",
+               "name" : "Chronic Condition Asserted",
+               "type" : "ExpressionRef"
+            }
+         } ]
+      }
+   }
+}

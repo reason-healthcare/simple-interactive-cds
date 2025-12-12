@@ -1,0 +1,22 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://example.org/ValueSet/AceInhibitorVS",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "AceInhibitorVS",
+      "title" : "ACE Inhibitor Value Set",
+      "description" : "",
+      "systems" : ["http://www.nlm.nih.gov/research/umls/rxnorm"]
+    },
+    {
+      "url" : "http://example.org/ValueSet/ChronicConditionVS",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ChronicConditionVS",
+      "title" : "Chronic Condition Value Set",
+      "description" : "",
+      "systems" : ["http://snomed.info/sct"]
+    }
+  ]
+}

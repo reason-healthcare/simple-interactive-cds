@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "AceInhibitorVS",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet AceInhibitorVS</b></p><a name=\"AceInhibitorVS\"> </a><a name=\"hcAceInhibitorVS\"> </a><p>This value set contains 2 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"AceInhibitorVS-http://www.nlm.nih.gov/research/umls/rxnorm-898372\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0898372</td><td>benazepril hydrochloride 20 MG / hydrochlorothiazide 25 MG Oral Tablet</td></tr><tr><td><a name=\"AceInhibitorVS-http://www.nlm.nih.gov/research/umls/rxnorm-104384\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0104384</td><td>ramipril 2.5 MG Oral Capsule [Altace]</td></tr></table></div>"
+  },
+  "url" : "http://example.org/ValueSet/AceInhibitorVS",
+  "version" : "0.1.0",
+  "name" : "AceInhibitorVS",
+  "title" : "ACE Inhibitor Value Set",
+  "status" : "draft",
+  "date" : "2025-12-11T11:33:52-05:00",
+  "publisher" : "Example Publisher",
+  "contact" : [{
+    "name" : "Example Publisher",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://example.org/example-publisher"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "concept" : [{
+        "code" : "898372",
+        "display" : "benazepril hydrochloride 20 MG / hydrochlorothiazide 25 MG Oral Tablet"
+      },
+      {
+        "code" : "104384",
+        "display" : "ramipril 2.5 MG Oral Capsule [Altace]"
+      }]
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2015-06-22T13:56:07Z",
+    "total" : 2,
+    "contains" : [{
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code" : "898372",
+      "display" : "benazepril hydrochloride 20 MG / hydrochlorothiazide 25 MG Oral Tablet"
+    },
+    {
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code" : "104384",
+      "display" : "ramipril 2.5 MG Oral Capsule [Altace]"
+    }]
+  }
+}

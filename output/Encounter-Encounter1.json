@@ -1,0 +1,32 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "Encounter1",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter Encounter1</b></p><a name=\"Encounter1\"> </a><a name=\"hcEncounter1\"> </a><p><b>status</b>: In Progress</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>subject</b>: <a href=\"Patient-Patient1.html\">Patient 1  (no stated gender), DoB Unknown</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType PPRF}\">primary performer</span></td><td><a href=\"Practitioner-Practitioner1.html\">Practitioner practitioner </a></td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-Organization1.html\">Organization organization</a></p></div>"
+  },
+  "status" : "in-progress",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "AMB",
+    "display" : "ambulatory"
+  },
+  "subject" : {
+    "reference" : "Patient/Patient1"
+  },
+  "participant" : [{
+    "type" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+        "code" : "PPRF",
+        "display" : "primary performer"
+      }]
+    }],
+    "individual" : {
+      "reference" : "Practitioner/Practitioner1"
+    }
+  }],
+  "serviceProvider" : {
+    "reference" : "Organization/Organization1"
+  }
+}

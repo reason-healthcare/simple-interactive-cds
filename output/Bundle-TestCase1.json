@@ -1,0 +1,114 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "TestCase1",
+  "meta" : {
+    "tag" : [{
+      "code" : "test"
+    }]
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://example.org/Patient/Patient1",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "Patient1",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Patient1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient Patient1</b></p><a name=\"Patient1\"> </a><a name=\"hcPatient1\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Patient 1  (no stated gender), DoB Unknown</p><hr/></div>"
+      },
+      "name" : [{
+        "given" : ["Patient 1"]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/Encounter/Encounter1",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "Encounter1",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_Encounter1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter Encounter1</b></p><a name=\"Encounter1\"> </a><a name=\"hcEncounter1\"> </a><p><b>status</b>: In Progress</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>subject</b>: <a href=\"Patient-Patient1.html\">Patient 1  (no stated gender), DoB Unknown</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType PPRF}\">primary performer</span></td><td><a href=\"Practitioner-Practitioner1.html\">Practitioner practitioner </a></td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-Organization1.html\">Organization organization</a></p></div>"
+      },
+      "status" : "in-progress",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "AMB",
+        "display" : "ambulatory"
+      },
+      "subject" : {
+        "reference" : "Patient/Patient1"
+      },
+      "participant" : [{
+        "type" : [{
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+            "code" : "PPRF",
+            "display" : "primary performer"
+          }]
+        }],
+        "individual" : {
+          "reference" : "Practitioner/Practitioner1"
+        }
+      }],
+      "serviceProvider" : {
+        "reference" : "Organization/Organization1"
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/Organization/Organization1",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "Organization1",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_Organization1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization Organization1</b></p><a name=\"Organization1\"> </a><a name=\"hcOrganization1\"> </a><p><b>name</b>: organization</p></div>"
+      },
+      "name" : "organization"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/Practitioner/Practitioner1",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "Practitioner1",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_Practitioner1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner Practitioner1</b></p><a name=\"Practitioner1\"> </a><a name=\"hcPractitioner1\"> </a><p><b>name</b>: practitioner </p></div>"
+      },
+      "name" : [{
+        "family" : "practitioner"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/Observation/HypertensionObservation",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "HypertensionObservation",
+      "meta" : {
+        "profile" : ["http://example.org/StructureDefinition/HypertensionFeature"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_HypertensionObservation\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation HypertensionObservation</b></p><a name=\"HypertensionObservation\"> </a><a name=\"hcHypertensionObservation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-HypertensionFeature.html\">Hypertension Feature</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://example.org/CodeSystem/CaseFeatureCodes hypertension-feature}\">Hypertension Feature</span></p><p><b>subject</b>: <a href=\"Patient-Patient1.html\">Patient 1  (no stated gender), DoB Unknown</a></p><p><b>effective</b>: 2025-01-15 00:00:00+0000</p><p><b>performer</b>: <a href=\"Practitioner-Practitioner1.html\">Practitioner practitioner </a></p><p><b>value</b>: false</p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://example.org/CodeSystem/CaseFeatureCodes",
+          "code" : "hypertension-feature"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient1"
+      },
+      "effectiveDateTime" : "2025-01-15T00:00:00Z",
+      "performer" : [{
+        "reference" : "Practitioner/Practitioner1"
+      }],
+      "valueBoolean" : false
+    }
+  }]
+}

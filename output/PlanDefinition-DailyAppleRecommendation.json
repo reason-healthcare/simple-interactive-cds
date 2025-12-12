@@ -1,0 +1,87 @@
+{
+  "resourceType" : "PlanDefinition",
+  "id" : "DailyAppleRecommendation",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<div>\n    <table class=\"grid dict\">\n        \n        <tr>\n            <th scope=\"row\"><b>Id: </b></th>\n            <td style=\"padding-left: 4px;\">DailyAppleRecommendation</td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Url: </b></th>\n            <td style=\"padding-left: 4px;\"><a href=\"PlanDefinition-DailyAppleRecommendation.html\">Daily Apple Recommendation</a></td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Version: </b></th>\n            <td style=\"padding-left: 4px;\">0.1.0</td>\n        </tr>\n        \n\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Title: </b></th>\n            <td style=\"padding-left: 4px;\">Daily Apple Recommendation</td>\n        </tr>\n        \n\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Status: </b></th>\n            <td style=\"padding-left: 4px;\">draft</td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Experimental: </b></th>\n            <td style=\"padding-left: 4px;\">true</td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Type: </b></th>\n            <td style=\"padding-left: 4px;\">\n                \n                    \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>system: </b> <span><a href=\"http://terminology.hl7.org/7.0.0/CodeSystem-plan-definition-type.html\">http://terminology.hl7.org/CodeSystem/plan-definition-type</a></span>\n                        </p>\n                        \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>code: </b> <span>eca-rule</span>\n                        </p>\n                        \n                        \n                    \n                \n                \n            </td>\n        </tr>\n        \n\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Date: </b></th>\n            <td style=\"padding-left: 4px;\">2025-12-11 11:33:52-0500</td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Publisher: </b></th>\n            <td style=\"padding-left: 4px;\">Example Publisher</td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Description: </b></th>\n            <td style=\"padding-left: 4px;\"><div><p>Recommendation to eat an apple daily for hypertension</p>\n</div></td>\n        </tr>\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Libraries: </b></th>\n            <td style=\"padding-left: 4px;\">\n                <table class=\"grid-dict\">\n                    \n                    <tr>\n                        <td><a href=\"Library-ApplicabilityLogic.html\">Applicability Logicversion: null0.1.0)</a></td>\n                    </tr>\n                    \n                </table>\n            </td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Actions: </b></th>\n            <td style=\"padding-left: 4px;\">\n                <table class=\"grid-dict\">\n                    \n                    <tr>\n                        <td>\n                            \n                            <b> Recommend daily apple for hypertension:</b> Recommend daily apple for hypertension\n                            \n                            <br/>\n                            \n                            \n                            <b>If:</b>\n                            \n                            <i>Applicability:</i>\n                            \n                            <i>(Should recommend daily apple if hypertensive)</i>\n                            <br/>\n                            \n                            <i>Applicability:</i>\n                            \n                            <i>(Should recommend normal diet if chronic conditions are not present)</i>\n                            <br/>\n                            \n                            \n                            \n                            \n                            <b>Then:</b> <i>Definition:</i> <a href=\"ActivityDefinition-DailyAppleActivity.html\">Daily Apple Activity</a><br/>\n                            \n                            \n                            \n                        </td>\n                    </tr>\n                    \n                    <tr>\n                        <td>\n                            \n                            Continue normal diet\n                            \n                            <br/>\n                            \n                            \n                            <b>If:</b>\n                            \n                            <i>Applicability:</i>\n                            \n                            <i>(Should recommend normal diet if chronic conditions are not present)</i>\n                            <br/>\n                            \n                            \n                            \n                            \n                            \n                        </td>\n                    </tr>\n                    \n                </table>\n            </td>\n        </tr>\n        \n    </table>\n</div>\n</div>"
+  },
+  "url" : "http://example.org/PlanDefinition/DailyAppleRecommendation",
+  "version" : "0.1.0",
+  "name" : "DailyAppleRecommendation",
+  "title" : "Daily Apple Recommendation",
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+      "code" : "eca-rule"
+    }]
+  },
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-12-11T11:33:52-05:00",
+  "publisher" : "Example Publisher",
+  "contact" : [{
+    "name" : "Example Publisher",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://example.org/example-publisher"
+    }]
+  }],
+  "description" : "Recommendation to eat an apple daily for hypertension",
+  "library" : ["http://example.org/Library/ApplicabilityLogic|0.1.0"],
+  "action" : [{
+    "id" : "daily-apple-recommendation",
+    "title" : "Recommend daily apple for hypertension",
+    "description" : "Recommend daily apple for hypertension",
+    "code" : [{
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+        "code" : "guideline-based-care"
+      }]
+    }],
+    "condition" : [{
+      "kind" : "applicability",
+      "expression" : {
+        "language" : "text/cql-identifier",
+        "expression" : "Should recommend daily apple if hypertensive"
+      }
+    },
+    {
+      "kind" : "applicability",
+      "expression" : {
+        "language" : "text/cql-identifier",
+        "expression" : "Should recommend normal diet if chronic conditions are not present"
+      }
+    }],
+    "input" : [{
+      "type" : "Observation",
+      "profile" : ["http://example.org/StructureDefinition/HypertensionFeature|0.1.0"]
+    }],
+    "definitionCanonical" : "http://example.org/ActivityDefinition/DailyAppleActivity"
+  },
+  {
+    "id" : "continue-normal-diet",
+    "title" : "Continue normal diet",
+    "description" : "Continue normal diet",
+    "textEquivalent" : "Continue normal diet",
+    "code" : [{
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+        "code" : "guideline-based-care"
+      }]
+    }],
+    "condition" : [{
+      "kind" : "applicability",
+      "expression" : {
+        "language" : "text/cql-identifier",
+        "expression" : "Should recommend normal diet if chronic conditions are not present"
+      }
+    }],
+    "input" : [{
+      "type" : "Observation",
+      "profile" : ["http://example.org/StructureDefinition/ChronicConditionFeature|0.1.0"]
+    }]
+  }]
+}

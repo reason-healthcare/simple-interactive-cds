@@ -1,0 +1,100 @@
+[
+  {
+    "id" : "DailyAppleActivity",
+    "type" : "ActivityDefinition",
+    "url" : "http://example.org/ActivityDefinition/DailyAppleActivity",
+    "version" : "0.1.0",
+    "name" : "DailyAppleActivity"
+  },
+  {
+    "id" : "CaseFeatureCodes",
+    "type" : "CodeSystem",
+    "url" : "http://example.org/CodeSystem/CaseFeatureCodes",
+    "version" : "0.1.0",
+    "name" : "CaseFeatureCodes"
+  },
+  {
+    "id" : "fhir.example",
+    "type" : "ImplementationGuide",
+    "url" : "http://example.org/ImplementationGuide/fhir.example",
+    "version" : "0.1.0",
+    "name" : "SimpleInteracticeCDS"
+  },
+  {
+    "id" : "ApplicabilityLogic",
+    "type" : "Library",
+    "url" : "http://example.org/Library/ApplicabilityLogic",
+    "version" : "0.1.0",
+    "name" : "ApplicabilityLogic"
+  },
+  {
+    "id" : "ChronicConditionFeatureLogic",
+    "type" : "Library",
+    "url" : "http://example.org/Library/ChronicConditionFeatureLogic",
+    "version" : "0.1.0",
+    "name" : "ChronicConditionFeatureLogic"
+  },
+  {
+    "id" : "Common",
+    "type" : "Library",
+    "url" : "http://example.org/Library/Common",
+    "version" : "0.1.0",
+    "name" : "Common"
+  },
+  {
+    "id" : "FHIRCommon",
+    "type" : "Library",
+    "url" : "http://example.org/Library/FHIRCommon",
+    "version" : "0.1.0",
+    "name" : "FHIRCommon"
+  },
+  {
+    "id" : "FHIRHelpers",
+    "type" : "Library",
+    "url" : "http://example.org/Library/FHIRHelpers",
+    "version" : "0.1.0",
+    "name" : "FHIRHelpers"
+  },
+  {
+    "id" : "HypertensionFeatureLogic",
+    "type" : "Library",
+    "url" : "http://example.org/Library/HypertensionFeatureLogic",
+    "version" : "0.1.0",
+    "name" : "HypertensionFeatureLogic"
+  },
+  {
+    "id" : "DailyAppleRecommendation",
+    "type" : "PlanDefinition",
+    "url" : "http://example.org/PlanDefinition/DailyAppleRecommendation",
+    "version" : "0.1.0",
+    "name" : "DailyAppleRecommendation"
+  },
+  {
+    "id" : "ChronicConditionFeature",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/StructureDefinition/ChronicConditionFeature",
+    "version" : "0.1.0",
+    "name" : "ChronicConditionFeature"
+  },
+  {
+    "id" : "HypertensionFeature",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/StructureDefinition/HypertensionFeature",
+    "version" : "0.1.0",
+    "name" : "HypertensionFeature"
+  },
+  {
+    "id" : "AceInhibitorVS",
+    "type" : "ValueSet",
+    "url" : "http://example.org/ValueSet/AceInhibitorVS",
+    "version" : "0.1.0",
+    "name" : "AceInhibitorVS"
+  },
+  {
+    "id" : "ChronicConditionVS",
+    "type" : "ValueSet",
+    "url" : "http://example.org/ValueSet/ChronicConditionVS",
+    "version" : "0.1.0",
+    "name" : "ChronicConditionVS"
+  }
+]

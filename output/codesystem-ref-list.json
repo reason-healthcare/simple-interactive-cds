@@ -1,0 +1,28 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://snomed.info/sct",
+      "version" : null,
+      "status" : "active",
+      "name" : "SNOMED_CT",
+      "title" : "SNOMED CT (all versions)",
+      "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+      "oids" : ["2.16.840.1.113883.6.96"],
+      "uses" : {
+      },
+      "ValueSet-ChronicConditionVS.html" : "Chronic Condition Value Set"
+    },
+    {
+      "url" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "version" : "3.0.1",
+      "status" : "active",
+      "name" : "RxNorm",
+      "title" : "RxNorm",
+      "description" : "RxNorm provides normalized names for clinical drugs and links its names to many of the drug vocabularies commonly used in pharmacy management and drug interaction software, including those of First Databank, Micromedex, and Gold Standard Drug Database. By providing links between these vocabularies, RxNorm can mediate messages between systems not using the same software and vocabulary. RxNorm now includes the United States Pharmacopeia (USP) Compendial Nomenclature from the United States Pharmacopeial Convention. USP is a cumulative data set of all Active Pharmaceutical Ingredients (API).",
+      "oids" : ["2.16.840.1.113883.6.88"],
+      "uses" : {
+      },
+      "ValueSet-AceInhibitorVS.html" : "ACE Inhibitor Value Set"
+    }
+  ]
+}

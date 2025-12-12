@@ -1,0 +1,568 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators",
+         "signatureLevel" : "None",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "258",
+            "s" : [ {
+               "value" : [ "","library ApplicabilityLogic version '0.1.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "ApplicabilityLogic",
+         "system" : "http://example.org",
+         "version" : "0.1.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "208",
+            "locator" : "5:1-5:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://example.org/FHIRHelpers",
+            "version" : "0.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'0.1.0'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "210",
+            "locator" : "6:1-6:75",
+            "localIdentifier" : "HypertensionFeature",
+            "path" : "http://example.org/HypertensionFeatureLogic",
+            "version" : "0.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "HypertensionFeatureLogic" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'0.1.0'"," called ","HypertensionFeature" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "212",
+            "locator" : "7:1-7:83",
+            "localIdentifier" : "ChronicConditionFeature",
+            "path" : "http://example.org/ChronicConditionFeatureLogic",
+            "version" : "0.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "212",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "ChronicConditionFeatureLogic" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'0.1.0'"," called ","ChronicConditionFeature" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "217",
+            "locator" : "9:1-9:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "215",
+            "locator" : "9:1-9:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "216",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "214",
+                  "locator" : "9:1-9:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "220",
+            "locator" : "11:1-15:8",
+            "name" : "Hypertension",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "220",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Hypertension\"",":\n  " ]
+                  }, {
+                     "r" : "221",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "225",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "225",
+                           "s" : [ {
+                              "r" : "223",
+                              "s" : [ {
+                                 "r" : "222",
+                                 "s" : [ {
+                                    "value" : [ "HypertensionFeature" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "223",
+                                 "s" : [ {
+                                    "value" : [ "\"Hypertension\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " is not null" ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "226",
+                        "s" : [ {
+                           "r" : "229",
+                           "s" : [ {
+                              "r" : "228",
+                              "s" : [ {
+                                 "r" : "227",
+                                 "s" : [ {
+                                    "value" : [ "HypertensionFeature" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "228",
+                                 "s" : [ {
+                                    "value" : [ "\"Hypertension\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "229",
+                              "s" : [ {
+                                 "value" : [ "value" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " as " ]
+                        }, {
+                           "r" : "230",
+                           "s" : [ {
+                              "value" : [ "boolean" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "231",
+                        "value" : [ "\n  else\n    ","null" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "221",
+               "locator" : "12:3-15:8",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "225",
+                  "locator" : "12:6-12:53",
+                  "type" : "Not",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "224",
+                     "locator" : "12:7-12:52",
+                     "type" : "IsNull",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "223",
+                        "locator" : "12:7-12:40",
+                        "name" : "Hypertension",
+                        "libraryName" : "HypertensionFeature",
+                        "type" : "ExpressionRef"
+                     }
+                  }
+               },
+               "then" : {
+                  "localId" : "226",
+                  "locator" : "13:5-13:55",
+                  "strict" : false,
+                  "type" : "As",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "229",
+                     "locator" : "13:5-13:44",
+                     "path" : "value",
+                     "type" : "Property",
+                     "source" : {
+                        "localId" : "228",
+                        "locator" : "13:5-13:38",
+                        "name" : "Hypertension",
+                        "libraryName" : "HypertensionFeature",
+                        "type" : "ExpressionRef"
+                     }
+                  },
+                  "asTypeSpecifier" : {
+                     "localId" : "230",
+                     "locator" : "13:49-13:55",
+                     "name" : "{http://hl7.org/fhir}boolean",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
+               "else" : {
+                  "localId" : "232",
+                  "asType" : "{http://hl7.org/fhir}boolean",
+                  "type" : "As",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "231",
+                     "locator" : "15:5-15:8",
+                     "type" : "Null"
+                  }
+               }
+            }
+         }, {
+            "localId" : "235",
+            "locator" : "17:1-21:8",
+            "name" : "Chronic Condition",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "235",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Chronic Condition\"",":\n  " ]
+                  }, {
+                     "r" : "236",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "240",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "240",
+                           "s" : [ {
+                              "r" : "238",
+                              "s" : [ {
+                                 "r" : "237",
+                                 "s" : [ {
+                                    "value" : [ "ChronicConditionFeature" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "238",
+                                 "s" : [ {
+                                    "value" : [ "\"Chronic Condition\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " is not null" ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "241",
+                        "s" : [ {
+                           "r" : "244",
+                           "s" : [ {
+                              "r" : "243",
+                              "s" : [ {
+                                 "r" : "242",
+                                 "s" : [ {
+                                    "value" : [ "ChronicConditionFeature" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "243",
+                                 "s" : [ {
+                                    "value" : [ "\"Chronic Condition\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "244",
+                              "s" : [ {
+                                 "value" : [ "value" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " as " ]
+                        }, {
+                           "r" : "245",
+                           "s" : [ {
+                              "value" : [ "boolean" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "246",
+                        "value" : [ "\n  else\n    ","null" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "236",
+               "locator" : "18:3-21:8",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "240",
+                  "locator" : "18:6-18:62",
+                  "type" : "Not",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "239",
+                     "locator" : "18:7-18:61",
+                     "type" : "IsNull",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "238",
+                        "locator" : "18:7-18:49",
+                        "name" : "Chronic Condition",
+                        "libraryName" : "ChronicConditionFeature",
+                        "type" : "ExpressionRef"
+                     }
+                  }
+               },
+               "then" : {
+                  "localId" : "241",
+                  "locator" : "19:5-19:64",
+                  "strict" : false,
+                  "type" : "As",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "244",
+                     "locator" : "19:5-19:53",
+                     "path" : "value",
+                     "type" : "Property",
+                     "source" : {
+                        "localId" : "243",
+                        "locator" : "19:5-19:47",
+                        "name" : "Chronic Condition",
+                        "libraryName" : "ChronicConditionFeature",
+                        "type" : "ExpressionRef"
+                     }
+                  },
+                  "asTypeSpecifier" : {
+                     "localId" : "245",
+                     "locator" : "19:58-19:64",
+                     "name" : "{http://hl7.org/fhir}boolean",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
+               "else" : {
+                  "localId" : "247",
+                  "asType" : "{http://hl7.org/fhir}boolean",
+                  "type" : "As",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "246",
+                     "locator" : "21:5-21:8",
+                     "type" : "Null"
+                  }
+               }
+            }
+         }, {
+            "localId" : "250",
+            "locator" : "27:1-31:9",
+            "name" : "Should recommend daily apple if hypertensive",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "250",
+                  "s" : [ {
+                     "value" : [ "/**\n * @description\n * Use case feature expressions to build out applicability\n */\n","define ","\"Should recommend daily apple if hypertensive\"",":\n  " ]
+                  }, {
+                     "r" : "251",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "252",
+                        "s" : [ {
+                           "value" : [ "\"Hypertension\"" ]
+                        } ]
+                     }, {
+                        "r" : "253",
+                        "value" : [ " then\n    ","true","\n  else\n    ","false" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "251",
+               "locator" : "28:3-31:9",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "255",
+                  "name" : "ToBoolean",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "252",
+                     "locator" : "28:6-28:19",
+                     "name" : "Hypertension",
+                     "type" : "ExpressionRef"
+                  } ]
+               },
+               "then" : {
+                  "localId" : "253",
+                  "locator" : "29:5-29:8",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "true",
+                  "type" : "Literal"
+               },
+               "else" : {
+                  "localId" : "254",
+                  "locator" : "31:5-31:9",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "258",
+            "locator" : "33:1-37:8",
+            "name" : "Should recommend normal diet if chronic conditions are not present",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "258",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Should recommend normal diet if chronic conditions are not present\"",":\n  " ]
+                  }, {
+                     "r" : "259",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "260",
+                        "s" : [ {
+                           "value" : [ "\"Chronic Condition\"" ]
+                        } ]
+                     }, {
+                        "r" : "261",
+                        "value" : [ " then\n    ","false","\n  else\n    ","true" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "259",
+               "locator" : "34:3-37:8",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "263",
+                  "name" : "ToBoolean",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "260",
+                     "locator" : "34:6-34:24",
+                     "name" : "Chronic Condition",
+                     "type" : "ExpressionRef"
+                  } ]
+               },
+               "then" : {
+                  "localId" : "261",
+                  "locator" : "35:5-35:9",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               },
+               "else" : {
+                  "localId" : "262",
+                  "locator" : "37:5-37:8",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "true",
+                  "type" : "Literal"
+               }
+            }
+         } ]
+      }
+   }
+}

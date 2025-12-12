@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ChronicConditionVS",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ChronicConditionVS</b></p><a name=\"ChronicConditionVS\"> </a><a name=\"hcChronicConditionVS\"> </a><p>This value set contains 2 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"ChronicConditionVS-http://snomed.info/sct-C0020538\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/C0020538\">C0020538</a></td><td>hypertensive disorder</td></tr><tr><td><a name=\"ChronicConditionVS-http://snomed.info/sct-C0029408\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/C0029408\">C0029408</a></td><td>Osteoarthritis</td></tr></table></div>"
+  },
+  "url" : "http://example.org/ValueSet/ChronicConditionVS",
+  "version" : "0.1.0",
+  "name" : "ChronicConditionVS",
+  "title" : "Chronic Condition Value Set",
+  "status" : "draft",
+  "date" : "2025-12-11T11:33:52-05:00",
+  "publisher" : "Example Publisher",
+  "contact" : [{
+    "name" : "Example Publisher",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://example.org/example-publisher"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "C0020538",
+        "display" : "hypertensive disorder"
+      },
+      {
+        "code" : "C0029408",
+        "display" : "Osteoarthritis"
+      }]
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2015-06-22T13:56:07Z",
+    "total" : 2,
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "C0020538",
+      "display" : "hypertensive disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "C0029408",
+      "display" : "Osteoarthritis"
+    }]
+  }
+}

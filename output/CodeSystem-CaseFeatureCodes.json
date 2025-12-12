@@ -1,0 +1,33 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "CaseFeatureCodes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CaseFeatureCodes</b></p><a name=\"CaseFeatureCodes\"> </a><a name=\"hcCaseFeatureCodes\"> </a><p>This  code system <code>http://example.org/CodeSystem/CaseFeatureCodes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">hypertension-feature<a name=\"CaseFeatureCodes-hypertension-feature\"> </a></td><td>Hypertension Feature</td><td>Hypertension Feature</td></tr><tr><td style=\"white-space:nowrap\">no-chronic-conditions-feature<a name=\"CaseFeatureCodes-no-chronic-conditions-feature\"> </a></td><td>Chronic Condition Feature</td><td>Chronic Condition Feature</td></tr></table></div>"
+  },
+  "url" : "http://example.org/CodeSystem/CaseFeatureCodes",
+  "version" : "0.1.0",
+  "name" : "CaseFeatureCodes",
+  "status" : "draft",
+  "date" : "2025-12-11T11:33:52-05:00",
+  "publisher" : "Example Publisher",
+  "contact" : [{
+    "name" : "Example Publisher",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://example.org/example-publisher"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "hypertension-feature",
+    "display" : "Hypertension Feature",
+    "definition" : "Hypertension Feature"
+  },
+  {
+    "code" : "no-chronic-conditions-feature",
+    "display" : "Chronic Condition Feature",
+    "definition" : "Chronic Condition Feature"
+  }]
+}

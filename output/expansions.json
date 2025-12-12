@@ -1,0 +1,86 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "6a0468dc-9b84-4c91-b90d-7b95c0626044",
+  "meta" : {
+    "lastUpdated" : "2025-12-11T11:33:52.321-05:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://example.org/ValueSet/AceInhibitorVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "AceInhibitorVS",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"/><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-AceInhibitorVS-http://www.nlm.nih.gov/research/umls/rxnorm-898372\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0898372</td><td>benazepril hydrochloride 20 MG / hydrochlorothiazide 25 MG Oral Tablet</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;898372&quot;, &quot;display&quot;: &quot;benazepril hydrochloride 20 MG / hydrochlorothiazide 25 MG Oral Tablet&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;898372&quot;&gt;&lt;display value=&quot;benazepril hydrochloride 20 MG / hydrochlorothiazide 25 MG Oral Tablet&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-AceInhibitorVS-http://www.nlm.nih.gov/research/umls/rxnorm-104384\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0104384</td><td>ramipril 2.5 MG Oral Capsule [Altace]</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;104384&quot;, &quot;display&quot;: &quot;ramipril 2.5 MG Oral Capsule [Altace]&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;104384&quot;&gt;&lt;display value=&quot;ramipril 2.5 MG Oral Capsule [Altace]&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://example.org/ValueSet/AceInhibitorVS",
+      "version" : "0.1.0",
+      "name" : "AceInhibitorVS",
+      "title" : "ACE Inhibitor Value Set",
+      "status" : "draft",
+      "date" : "2025-12-11T11:33:52-05:00",
+      "publisher" : "Example Publisher",
+      "contact" : [{
+        "name" : "Example Publisher",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://example.org/example-publisher"
+        }]
+      }],
+      "expansion" : {
+        "timestamp" : "2015-06-22T13:56:07Z",
+        "total" : 2,
+        "contains" : [{
+          "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code" : "898372",
+          "display" : "benazepril hydrochloride 20 MG / hydrochlorothiazide 25 MG Oral Tablet"
+        },
+        {
+          "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code" : "104384",
+          "display" : "ramipril 2.5 MG Oral Capsule [Altace]"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/ValueSet/ChronicConditionVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "ChronicConditionVS",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"/><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-ChronicConditionVS-http://snomed.info/sct-C0020538\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/C0020538\">C0020538</a></td><td>hypertensive disorder</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;code&quot;: &quot;C0020538&quot;, &quot;display&quot;: &quot;hypertensive disorder&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;code value=&quot;C0020538&quot;&gt;&lt;display value=&quot;hypertensive disorder&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-ChronicConditionVS-http://snomed.info/sct-C0029408\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/C0029408\">C0029408</a></td><td>Osteoarthritis</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;code&quot;: &quot;C0029408&quot;, &quot;display&quot;: &quot;Osteoarthritis&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;code value=&quot;C0029408&quot;&gt;&lt;display value=&quot;Osteoarthritis&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://example.org/ValueSet/ChronicConditionVS",
+      "version" : "0.1.0",
+      "name" : "ChronicConditionVS",
+      "title" : "Chronic Condition Value Set",
+      "status" : "draft",
+      "date" : "2025-12-11T11:33:52-05:00",
+      "publisher" : "Example Publisher",
+      "contact" : [{
+        "name" : "Example Publisher",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://example.org/example-publisher"
+        }]
+      }],
+      "expansion" : {
+        "timestamp" : "2015-06-22T13:56:07Z",
+        "total" : 2,
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "C0020538",
+          "display" : "hypertensive disorder"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "C0029408",
+          "display" : "Osteoarthritis"
+        }]
+      }
+    }
+  }]
+}
